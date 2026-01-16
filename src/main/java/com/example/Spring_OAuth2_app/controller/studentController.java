@@ -32,4 +32,9 @@ public class studentController {
         return (CsrfToken) request.getAttribute("_csrf");
     }
 
+    @GetMapping("/session-id")
+    public String greet(HttpServletRequest request) {
+        return "Session Id =  "+request.getSession().getId();
+    }
+
 }
